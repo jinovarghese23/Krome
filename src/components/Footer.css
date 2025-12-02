@@ -6,17 +6,16 @@
 
 /* Footer Container */
 .footer-container {
-  /* CSS Variables for responsive sizing */
   --icon-size-base: 50px;
   --icon-size-mobile: 40px;
   --icon-size-small: 35px;
   --icon-padding: 0.5rem;
 
-  color: #333;
+  color: #fff;
   padding: 2rem 1rem;
   position: relative;
   width: 100%;
-  background: #f8f9fa; /* Light gray background */
+  background: #000; /* UPDATED: Dark background so white text is visible */
 }
 
 .footer-content {
@@ -35,7 +34,9 @@
   flex: 1;
   min-width: 200px;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 .footer-logo {
@@ -43,6 +44,17 @@
   height: auto;
   border-radius: 8px;
   object-fit: contain;
+}
+
+.company-description {
+  max-width: 500px;
+}
+
+.company-description p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #fff; /* UPDATED */
+  text-align: left;
 }
 
 /* Social Section */
@@ -54,18 +66,19 @@
 }
 
 .social-icons-container {
-  min-width: 350px;
+  min-width: 300px;
   display: flex;
   justify-content: space-around;
   position: relative;
   align-items: center;
+  gap: 1.5rem;
 }
 
 /* Icon Wrapper */
 .icon-wrapper {
   width: var(--icon-size-base);
   height: var(--icon-size-base);
-  background: #fff;
+  background: #fff; /* icon background stays white */
   border-radius: 50%;
   cursor: pointer;
   outline: none;
@@ -82,57 +95,6 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Icon Name Tooltip */
-.icon-name {
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  font-size: 12px;
-  color: #fff;
-  opacity: 0;
-  visibility: hidden;
-  border-radius: 4px;
-  text-align: center;
-  padding: 5px 10px;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-  z-index: 10;
-  transform: translateX(-50%);
-  pointer-events: none;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
-
-.icon-wrapper:hover .icon-name {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(-2px);
-}
-
-.insta-icon .icon-name {
-  background: linear-gradient(
-    45deg,
-    #f09433,
-    #e6683c,
-    #dc2743,
-    #cc2366,
-    #bc1888
-  );
-}
-
-.linkedin-icon .icon-name {
-  background: #0077b5;
-}
-
-.whatsapp-icon .icon-name {
-  background: #25d366;
-}
-
-.youtube-icon .icon-name {
-  background: #ff0000;
-}
-
-/* Social Icon */
 .social-icon {
   z-index: 1;
   display: flex;
@@ -190,8 +152,8 @@
   );
 }
 
-.linkedin-icon .social-icon::before {
-  background: #0077b5;
+.dialer-icon .social-icon::before {
+  background: #297cb8;
 }
 
 .whatsapp-icon .social-icon::before {
@@ -221,11 +183,12 @@
   padding-top: 1rem;
   width: 100%;
   font-family: inherit;
+  border-top: 1px solid #444; /* Updated for dark mode */
 }
 
-.copyright-section p {
+copyright-section p {
   margin: 0;
-  color: #666;
+  color: #fff; /* UPDATED */
   font-size: 0.9rem;
   line-height: 1.4;
 }
@@ -244,17 +207,20 @@
   }
 
   .logo-section {
-    justify-content: center;
-    order: 1;
+    align-items: center;
+  }
+
+  .company-description p {
+    text-align: center;
+    font-size: 0.9rem;
   }
 
   .social-section {
     justify-content: center;
-    order: 2;
   }
 
   .social-icons-container {
-    min-width: 300px;
+    min-width: 280px;
     justify-content: center;
     gap: 1.5rem;
   }
@@ -266,19 +232,6 @@
   .icon-svg {
     width: 55%;
     height: 55%;
-    max-width: 22px;
-    max-height: 22px;
-  }
-
-  .icon-name {
-    top: -35px;
-    font-size: 11px;
-    padding: 4px 8px;
-  }
-
-  .copyright-section {
-    order: 3;
-    margin-top: 1.5rem;
   }
 }
 
@@ -290,7 +243,7 @@
   }
 
   .social-icons-container {
-    min-width: 280px;
+    min-width: 260px;
     gap: 1rem;
   }
 
@@ -299,22 +252,12 @@
     height: var(--icon-size-base);
   }
 
-  .icon-svg {
-    width: 52%;
-    height: 52%;
-    max-width: 20px;
-    max-height: 20px;
-  }
-
-  .icon-name {
-    top: -32px;
-    font-size: 10px;
-    padding: 3px 6px;
+  .company-description p {
+    font-size: 0.85rem;
   }
 
   .copyright-section p {
     font-size: 0.85rem;
-    padding: 0 0.5rem;
   }
 }
 
@@ -325,101 +268,24 @@
   }
 
   .social-icons-container {
-    min-width: 250px;
+    min-width: 240px;
     gap: 0.8rem;
-  }
-
-  .icon-wrapper {
-    width: var(--icon-size-base);
-    height: var(--icon-size-base);
-  }
-
-  .icon-svg {
-    width: 50%;
-    height: 50%;
-    max-width: 18px;
-    max-height: 18px;
-  }
-
-  .icon-name {
-    top: -30px;
-    font-size: 9px;
-    padding: 3px 5px;
   }
 
   .footer-logo {
     max-width: 100px;
   }
-}
 
-/* Large Screens */
-@media (min-width: 1200px) {
-  .footer-container {
-    --icon-size-base: 55px;
-  }
-
-  .icon-svg {
-    width: 65%;
-    height: 65%;
-    max-width: 26px;
-    max-height: 26px;
-  }
-
-  .icon-name {
-    font-size: 13px;
-    padding: 6px 12px;
-    top: -45px;
+  .company-description p {
+    font-size: 0.8rem;
   }
 }
 
-/* Extra Large Screens */
-@media (min-width: 1440px) {
-  .footer-container {
-    --icon-size-base: 60px;
-  }
-
-  .icon-svg {
-    width: 70%;
-    height: 70%;
-    max-width: 28px;
-    max-height: 28px;
-  }
-}
-
-/* High DPI Screens */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .icon-svg {
-    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
-  }
-
-  .social-icon:hover .icon-svg {
-    filter: brightness(1.2) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
-  }
-}
-
-/* Reduced motion for accessibility */
-@media (prefers-reduced-motion: reduce) {
-  .icon-wrapper,
-  .social-icon,
-  .icon-svg,
-  .icon-name {
-    transition: none;
-  }
-
-  .social-icon:hover .icon-svg {
-    transform: none;
-  }
-
-  .icon-wrapper:hover {
-    transform: none;
-  }
-}
-
-/* Dark mode support */
+/* Dark Mode */
 @media (prefers-color-scheme: dark) {
   .footer-container {
-    color: #e0e0e0;
-    background: #1a1a1a; /* Dark background for dark mode */
+    background: #000; /* still black */
+    color: #fff;
   }
 
   .icon-wrapper {
@@ -427,11 +293,19 @@
   }
 
   .social-icon {
-    color: #e0e0e0;
+    color: #fff;
+  }
+
+  .company-description p {
+    color: #fff;
+  }
+
+  .copyright-section {
+    border-top-color: #333;
   }
 
   .copyright-section p {
-    color: #999;
+    color: #bbb;
   }
 }
 
@@ -443,9 +317,10 @@
 
   .footer-container {
     background: #fff !important;
+    color: #000 !important;
   }
 
-  .copyright-section p {
-    color: #000;
+  .company-description p {
+    color: #000 !important;
   }
 }
