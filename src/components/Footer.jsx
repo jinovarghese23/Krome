@@ -11,7 +11,7 @@ function Footer() {
           <img src={logo} alt="Company Logo" className="footer-logo" />
           <div className="company-description">
             <p>
-              Krome Culture Productions, founded by Krishnaprasad, delivers
+              Krome Culture Productions, founded by Krishna, delivers
               high-impact video content including commercials, product shoots,
               interviews, social media reels, and more. We also offer a fully
               equipped studio space and rental services.
