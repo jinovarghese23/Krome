@@ -85,10 +85,7 @@ function Footer() {
             </a>
 
             {/* YouTube */}
-            <a
-              href="https://www.youtube.com/@MrPerfectTechofficial"
-              target="_blank"
-            >
+            <a href="https://www.youtube.com/@iamkrome-ze1xl" target="_blank">
               <div className="icon-wrapper youtube-icon">
                 <div className="social-icon">
                   <svg
